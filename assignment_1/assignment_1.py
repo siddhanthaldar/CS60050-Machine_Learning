@@ -1,3 +1,9 @@
+'''
+Roll No.       : 16EE30025
+Name 	       : Siddhant Haldar
+Assignment No. : 1
+'''
+
 data = []  #to store data from csv file
 
 #read data from csv
