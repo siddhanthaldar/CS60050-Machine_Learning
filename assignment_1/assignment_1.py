@@ -2,12 +2,28 @@
 Roll No.       : 16EE30025
 Name 	       : Siddhant Haldar
 Assignment No. : 1
+
+Instructions:
+To run the code, type the following command in the terminal
+	
+	python assignment_1.py --file "path to data1.csv"
+
 '''
+
+import argparse
+
+#Parse command line arguements
+parser = argparse.ArgumentParser(description='Assignment 1')
+parser.add_argument("--file", required=True, help='File containing training data')
+
+arg = parser.parse_args()
+
+file_name = arg.file
 
 data = []  #to store data from csv file
 
 #read data from csv
-with open('data1.csv',"r") as csv_data:
+with open(file_name,"r") as csv_data:
 	data = csv_data.read().split('\n')
 
 x = []		# train data
@@ -49,24 +65,3 @@ for i in range(len(h)):
 			res_string += ",-" + str(i+1)
 
 print(res_string)
-
-
-
-
-# count = 0		
-# final_attributes = []
-
-# for i in range(len(h)):
-# 	if h[i]!=-2:
-# 		count += 1
-# 		final_attributes.append(i+1)
-
-# res_string = str(count)
-
-# for x in final_attributes:
-# 	if(h[x-1] == 1):
-# 		res_string += "," + str(x)
-# 	else:
-# 		res_string += ",-" + str(x)
-
-# print(res_string)			
