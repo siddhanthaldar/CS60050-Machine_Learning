@@ -6,7 +6,7 @@ Assignment No. : 1
 Instructions:
 To run the code, type the following command in the terminal
 	
-	python assignment_1.py --file "path to data1.csv"
+	python 16EE30025_1.py --file "filename"
 
 '''
 
